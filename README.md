@@ -18,25 +18,40 @@ is as follows:
 
 ---
 device1:
+
    ip: 192.168.1.1
+
    username: admin
+
    password: 'RQ269BYafin6M8X4SyVK3+1Bx+4WlN3+DlMKYfS/s6U='
+
    command: show running-config
+
    stack_number: '1'
+
 device2:
+
    ip: 192.168.1.2
+
    username: admin
+
    password: 'yEo3W+wjD4JiA5an4B2iiXqKwUw6pteU1R0HUG2IttA='
+
    command: show running-config interface e100/1/1-48
 
 Note the encrypted passwords in the file. The passwords are encrypted with AES using the included pwencrypt.py script.
 To obtain the encrypted form of the password to put in the .yml file,  run the script and provide the clear-text password:
 
 Enter encryption key:
+
 Password:
+
 Enter password:
+
 Password:
+
 MqwbtIlgzWsJdrbhJDQlOxoJ7sp/bZ5ygx+2TWs+gGA=
+
 
 The encryption key is not stored anywhere,  it will need to be remembered and used when the intfcompare.py script is run.
 The key will be used to decrypt the passwords in the .yml file at run time.  
@@ -45,8 +60,9 @@ Requirements:
 The PyCrypto, Paramiko, and CiscoConfParse Python modules are required and must be installed using your favorite package manager. Below is an example using PIP:
 
 sudo pip install pycrypto
-sudo pip install paramiko
-sudo pip install ciscoconfparse
 
+sudo pip install paramiko
+
+sudo pip install ciscoconfparse
 
 
